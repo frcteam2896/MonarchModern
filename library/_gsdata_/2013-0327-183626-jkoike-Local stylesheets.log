@@ -1,0 +1,60 @@
+2013-03-27 18:36:28: -- Local stylesheets: ANALYSIS started by User on 'jkoike' (GoodSync 3.9.7.0)
+2013-03-27 18:36:28: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library <-> ftp://direct.team2896damien.com
+2013-03-27 18:36:28: L: Files: 42 (excluded 2). Folders: 6 (excluded 1). /dev/disk0s2 HFS, Free: 34175M, Total: 128999M
+2013-03-27 18:36:37: R: Files: 43 (excluded 1). Folders: 6 (excluded 1). FTP: FTP Server ready.
+2013-03-27 18:36:37: /css/style.css: Conflict: File Modified on Both Sides
+2013-03-27 18:36:37: /less/1030up.less: Conflict: File Modified on Both Sides
+2013-03-27 18:36:37: /less/1240up.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/2x.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/481up.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/768up.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/ie.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/login.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/mixins.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/normalize.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: /less/style.less: Conflict: File differs on L and R but generations are the same
+2013-03-27 18:36:37: Analyze has finished with Conflicts. Resolve Conflicts by selecting the correct sync direction, then click Sync
+2013-03-27 18:36:37: Changes: 13, Conflicts: 11, CopyTime: 0, CopyState: 0/0, Errors: 0
+2013-03-27 18:36:37: Right to Left: Copy File: 2 
+2013-03-27 18:36:37: -- Analysis Completed. Time 00:00:11, Speed: 4 files/s
+2013-03-27 18:36:37: 
+2013-03-27 18:37:10: == Local stylesheets: SYNC started by User on 'jkoike'
+2013-03-27 18:37:10: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library <-> ftp://direct.team2896damien.com
+2013-03-27 18:37:13: Copy Over 'ftp://direct.team2896damien.com/css/style.css' -> '/Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/css/style.css' (User Action)
+2013-03-27 18:37:16: Copy Over 'ftp://direct.team2896damien.com/images/favicon.ico' -> '/Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/images/favicon.ico'
+2013-03-27 18:37:17: Copy Over 'ftp://direct.team2896damien.com/less/1030up.less' -> '/Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/1030up.less' (User Action)
+2013-03-27 18:37:17: Copy Mod Time of ftp://direct.team2896damien.com/less/1240up.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/1240up.less
+2013-03-27 18:37:17: Copy Mod Time of ftp://direct.team2896damien.com/less/2x.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/2x.less
+2013-03-27 18:37:17: Copy Mod Time of ftp://direct.team2896damien.com/less/481up.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/481up.less
+2013-03-27 18:37:17: Copy Mod Time of ftp://direct.team2896damien.com/less/768up.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/768up.less
+2013-03-27 18:37:18: Copy Over 'ftp://direct.team2896damien.com/less/base.less' -> '/Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/base.less'
+2013-03-27 18:37:19: Copy Mod Time of ftp://direct.team2896damien.com/less/ie.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/ie.less
+2013-03-27 18:37:19: Copy Mod Time of ftp://direct.team2896damien.com/less/login.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/login.less
+2013-03-27 18:37:19: Copy Mod Time of ftp://direct.team2896damien.com/less/mixins.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/mixins.less
+2013-03-27 18:37:19: Copy Mod Time of ftp://direct.team2896damien.com/less/normalize.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/normalize.less
+2013-03-27 18:37:19: Copy Mod Time of ftp://direct.team2896damien.com/less/style.less to /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/less/style.less
+2013-03-27 18:37:20: Save State File ftp://direct.team2896damien.com/_gsdata_/_file_state_v4._gs
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_1030up.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/768up.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_2x.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_mixins.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/1240up.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/login.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/481up.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_768up.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/ie.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/normalize.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/style.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/ie.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/config.rb
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_normalize.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/login.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_481up.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_1240up.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/style.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/scss/_base.scss
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/2x.less
+2013-03-27 18:37:20: Deleted Recycled: /Applications/MAMP/htdocs/wordpress/wp-content/themes/Robotics/library/_gsdata_/_saved_/less/mixins.less
+2013-03-27 18:37:20: Items Synced OK: 13, Errors: 0
+2013-03-27 18:37:22: == Sync Completed. Time: 00:00:15, Speed: 8417/s (2544/s)
+2013-03-27 18:37:22: 

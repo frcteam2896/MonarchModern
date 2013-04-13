@@ -1,0 +1,6 @@
+ErrorDocument 404 /wordpress/wp-content/themes/Bones/404.php;
+ErrorDocument 500 /wordpress/wp-content/themes/Bones/500.php;
+Options +SymLinksIfOwnerMatch
+# BEGIN WordPress
+
+# END WordPress

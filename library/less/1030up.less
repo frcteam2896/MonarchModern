@@ -1,0 +1,90 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylesheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+#container{
+    background-color:@base;
+    padding-left:0px;
+}
+#content{
+    background-color:@base;
+    padding: 30px 10%
+}
+#inner-content{
+    background-color:@content;
+    color:@white;
+    width: 80%;
+    padding: 0 10%;
+}
+.anchor{
+    position:absolute;
+    .border-radius(0,0,2em,2em);
+}
+.float{
+    position:fixed !important;
+    top:0px !important;
+    bottom:auto !important;
+    .border-radius(0,0,2em,0);
+}
+nav{
+    position:auto;
+}
+#navbar{
+        top:300px;
+        right:0px;
+        left:auto;
+        width:95%;
+        background-color: darken(@base, 5%);
+        border-right-width:0;
+        height:4em;
+        &:hover{
+            right:0px;
+            left:auto;
+        }
+        .nav{
+            position:inherit;
+            height: 2.5em;
+            width:95%;
+            top:0;
+            li{
+                width:8em;
+                float:left;
+                top:0;
+                left:.5em;
+                margin-bottom:0px;
+                margin-right:1em;
+                a{
+                    .clearfix;
+                    text-align:center;
+                    .button;
+                    width:100%;
+                    margin-bottom:0px;
+                }
+            }
+            .sub-menu{
+                width:auto;
+                li{
+                    left:0;
+                    a{
+                        margin:.125em 0;
+                    }
+                } 
+            }
+                /* highlight current page */
+    	    li.current-menu-item,
+	        li.current_page_item,
+        	li.current-page-ancestor {
+	    	    a {
+                    .button(darken(@link, 15%), @link);
+                    margin-bottom:0px;
+                }
+    	    }  /* end current highlighters */
+        }
+            
+    }
