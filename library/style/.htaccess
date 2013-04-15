@@ -4,3 +4,4 @@ Options +SymLinksIfOwnerMatch
 # BEGIN WordPress
 
 # END WordPress
+AddHandler application/x-httpd-php .css
