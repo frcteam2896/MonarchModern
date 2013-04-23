@@ -1,4 +1,6 @@
-/******************************************************************
+<?php 
+header("Content-type: text/css; charset: UTF-8");
+require_once("library/conf.inc");?>/******************************************************************
 Site Name: 
 Author: 
 
@@ -64,18 +66,18 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
-@alert-yellow:      #ebe16f;
-@alert-red:         #fbe3e4;
-@alert-green:       #e6efc2;
-@alert-blue:        #d5edf8;
+@alert-yellow:      <?echo $MonMod_alertY;?>;
+@alert-red:         <?echo $MonMod_alertR;?>;
+@alert-green:       <?echo $MonMod_alertG;?>;
+@alert-blue:        <?echo $MonMod_alertB;?>;
 
-@black:             #000;
-@white:             #fff;
+@black:             <?echo $MonMod_black;?>;
+@white:             <?echo $MonMod_white;?>;
 
-@base:              #5d00b9;
-@link:              #FF870F;
-@bones-blue:        #1990db;
-@content:           #555555;
+@base:              <?echo $MonMod_base;?>;
+@link:              <?echo $MonMod_link;?>;
+@bones-blue:        <?echo $MonMod_bonesB;?>;
+@content:           <?echo $MonMod_content;?>;
 
 /*********************
 TYPOGRAPHY
