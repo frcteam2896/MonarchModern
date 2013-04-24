@@ -154,4 +154,130 @@ function bones_wpsearch($form) {
     </form>';
     return $form;
 } // don't remove this bracket!
+
+//Initialize theme menu
+function init_apperance_menu(){
+     register_setting( 'theme_settings', 'theme_settings' );
+}
+
+//Add theme menu
+function add_appearance_menu(){
+     add_theme_page("Theme Settings", "Theme Settings", "edit_theme_options","monModSettings", "monModSettings");
+     }   
+
+//Add actions to utilize above functions
+add_action('admin_menu', 'add_appearance_menu');
+add_action("admin_init", "init_apperance_menu");
+
+//Render setting page
+function monModSettings(){
+    if ( ! isset( $_REQUEST['updated'] ) )
+    $_REQUEST['updated'] = false;
+    if ( ! isset( $_REQUEST['updated'] ) )
+$_REQUEST['updated'] = false;
+
+//get variables outside scope
+global $color_scheme;
+?>
+
+<div>
+
+<div id="icon-options-general"></div>
+<h2><?php _e( 'Theme Settings' ) //your admin panel title ?></h2>
+
+<?php
+//show saved options message
+if ( false !== $_REQUEST['updated'] ) : ?>
+<div><p><strong><?php _e( 'Options saved' ); ?></strong></p></div>
+<?php endif;
+//Constructs stylesheet config file
+$conf = "@alert-yellow:      ".$_POST['aY'].";
+@alert-red:         ".$_POST["aR"].";
+@alert-green:       ".$_POST["aG"].";
+@alert-blue:        ".$_POST["aB"].";
+
+@black:             #000;
+@white:             #fff;
+
+@base:              ".$_POST["Base"].";
+@link:              ".$_POST["Link"].";
+@bones-blue:        ".$_POST["bB"].";
+@content:           ".$_POST["Content"].";";
+file_put_contents("library/style/conf.inc", $conf) ?>
+
+<form method="post" action="options.php">
+
+<?php settings_fields( 'theme_settings' ); ?>
+<?php $options = get_option( 'theme_settings' ); ?>
+    <h2>Colors</h2>
+<table>
+<?//Alert Colors ?>
+<tr valign="top">
+<th scope="row"><?php _e( 'Alert(Yellow)' ); ?></th>
+<td><input id="theme_settings[aY]" type="text" size="36" name="aY" value="<?php esc_attr_e( $options['aY'] ); ?>" />
+<label for="theme_settings[aY]"></label></td>
+</tr>
+
+<tr valign="top">
+<th scope="row"><?php _e( 'Alert(Red)' ); ?></th>
+<td><input id="theme_settings[aR]" type="text" size="36" name="aR" value="<?php esc_attr_e( $options['aR'] ); ?>" />
+<label for="theme_settings[aR]"></label></td>
+</tr>
+
+<tr valign="top">
+<th scope="row"><?php _e( 'Alert(Red)' ); ?></th>
+<td><input id="theme_settings[aG]" type="text" size="36" name="aG" value="<?php esc_attr_e( $options['aG'] ); ?>" />
+<label for="theme_settings[aG]"></label></td>
+</tr>
+
+<tr valign="top">
+<th scope="row"><?php _e( 'Alert(Blue)' ); ?></th>
+<td><input id="theme_settings[aB]" type="text" size="36" name="aB" value="<?php esc_attr_e( $options['aY'] ); ?>" />
+<label for="theme_settings[aB]"></label></td>
+</tr>
+
+<tr valign="top">
+<th scope="row"><?php _e( 'Base Color' ); ?></th>
+<td><input id="theme_settings[Base]" type="text" size="36" name="Base" value="<?php esc_attr_e( $options['Base'] ); ?>" />
+<label for="theme_settings[Base]"></label></td>
+</tr>
+
+<tr valign="top">
+<th scope="row"><?php _e( 'Hyperlink Color' ); ?></th>
+<td><input id="theme_settings[Base]" type="text" size="36" name="Link" value="<?php esc_attr_e( $options['Link'] ); ?>" />
+<label for="theme_settings[Link]"></label></td>
+</tr>
+
+<tr valign="top">
+<th scope="row"><?php _e( 'Content Color' ); ?></th>
+<td><input id="theme_settings[Content]" type="text" size="36" name="Content" value="<?php esc_attr_e( $options['Content'] ); ?>" />
+<label for="theme_settings[Content]"></label></td>
+</tr>
+</table>
+
+<h2>Trackers</h2>
+
+<table>
+<tr valign="top">
+<th scope="row"><?php _e( 'Tracking Code' ); ?></th>
+<td><label for="theme_settings[tracking]"><?php _e( 'Enter your analytics tracking code' ); ?></label>
+<br />
+<textarea id="theme_settings[tracking]" name="theme_settings[tracking]" rows="5" cols="36"><?php esc_attr_e( $options['tracking'] ); ?></textarea></td>
+</tr>
+
+<tr valign="top">
+<th scope="row"><?php _e( 'Flag Counter' ); ?></th>
+<td><label for="theme_settings[tracking]"><?php _e( 'Enter your Flag Counter code(<a href = "http://flagcounter.com/">http://flagcounter.com/</a>)' ); ?></label>
+<br />
+<textarea id="theme_settings[F]" name="theme_settings[tracking]" rows="5" cols="36"><?php esc_attr_e( $options['Flag'] ); ?></textarea></td>
+</tr>
+</table>
+<input name="updated" id="updated" value="1" type="hidden">
+<p><input name="submit" id="submit" value="Save Changes" type="submit"></p>
+</form>
+
+</div><!-- END wrap -->
+
+<?php
+}
 ?>
