@@ -1,3 +1,5 @@
+<?php $track = get_option('theme_trackers');
+$color = get_option('theme_color');?>
 <!doctype html>  
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -33,7 +35,7 @@
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36508616-1']);
+  _gaq.push(['_setAccount', '<?php echo $track['tracking']?>']);
   _gaq.push(['_trackPageview']);
 
   (function() {
