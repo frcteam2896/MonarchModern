@@ -208,7 +208,14 @@ file_put_contents(get_theme_root("Monarch Modern")."/MonarchModern-Dev/library/s
 <form method="post" action="options.php">
 <?php settings_fields('theme_settings');
 $options = get_option('theme_color');
-$track = get_option('theme_trackers'); ?>
+$track = get_option('theme_trackers');
+if(isset($theme_color[ay])) $theme_color = array();
+add_action('admin_enqueue_scripts', 'my_admin_scripts');
+function my_admin_scripts() {
+        wp_enqueue_media();
+        wp_register_script('upload-js', get_template_directory_uri().'/library/js/upload.js', array('jquery'));
+        wp_enqueue_script('upload-js');
+}?>
     <h2>Colors</h2>
 <table>
 <?//Alert Colors ?>
@@ -254,6 +261,19 @@ $track = get_option('theme_trackers'); ?>
 <label for="theme_settings[content]"></label></td>
 </tr>
 </table>
+    
+    <h2>Icons and Stuff</h2>
+<label for="upload_image"><h3>Logo</h3><br/>
+    <input id="upload_image" type="text" size="36" name="theme_color[image]" value="<?php if (isset($theme_color["image"])) echo $theme_color["image"]; else echo "http://";?>" /> 
+    <input id="upload_image_button" class="button" type="button" value="Upload Image" />
+    <br />Enter a URL or upload an image
+</label>
+<br/>
+<label for="upload_image"><h3>Favicon</h3><br/>
+    <input id="upload_image" type="text" size="36" name="theme_color[image]" value="<?php if (isset($theme_color["image"])) echo $theme_color["image"]; else echo "http://";?>" /> 
+    <input id="upload_image_button" class="button" type="button" value="Upload Image" />
+    <br />Enter a URL or upload an image
+</label>
 
 <h2>Trackers</h2>
 

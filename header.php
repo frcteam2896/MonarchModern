@@ -26,7 +26,7 @@ $color = get_option('theme_color');?>
 				<div id="header">
 					<img src="<?php header_image(); ?>" alt="Robotics Header"/>
 					<a href="<?php echo home_url();?>">
-						<img src="/wp-content/themes/Robotics/library/images/banner.png" alt="Team Logo" id="logo"/>
+                                            <img src="<?php echo get_template_directory_uri();?>/library/images/banner.png" alt="Team Logo" id="logo"/>
 					</a>
 				</div>
 		<!-- end of wordpress head -->
