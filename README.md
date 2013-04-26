@@ -23,6 +23,23 @@ in a timely manner.  We do not do this because we are rude, but rather than
 because we are busy doing other things.
 
 =========================
+
+INSTALL-
+
+AUTOMATIC:
+-Use Wordpress' automated install tool (Under Appearance->Themes->
+Install Themes(tab)->Upload(tab)
+-Replace /wp-content/themes/MonarchModern-Stable/favicon.ico with your wanted
+favicon(DO NOT CHANGE FILENAME)
+-Replace /wp-content/themes/MonarchModern-Stable/favicon.ico with your wanted
+logo(once again, DO NOT CHANGE FILENAME)
+-Enjoy!
+
+MANUAL:
+-Upload MonarchModern-Stable folder to /wp-content/themes/
+-Follow automatic instructions from after using the install tool
+
+=========================
 Uses-
 Wordpress
 HTML5
