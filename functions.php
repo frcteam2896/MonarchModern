@@ -190,7 +190,7 @@ if ( false !== $_REQUEST['settings-updated'] ) { ?>
 <div><p><strong><?php _e( 'Options saved' ); ?></strong></p></div>
 <?php
 $options = get_option('theme_color');
-$home = get_theme_root("Monarch Modern")."/MonarchModern-Dev";
+$home = get_theme_root("Monarch Modern")."/MonarchModern-Stable";
 //Constructs stylesheet config file
 $conf = "@alert-yellow:      #".$options['ay'].";
 @alert-red:         #".$options["ar"].";
