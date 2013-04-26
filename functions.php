@@ -190,6 +190,7 @@ if ( false !== $_REQUEST['settings-updated'] ) { ?>
 <div><p><strong><?php _e( 'Options saved' ); ?></strong></p></div>
 <?php
 $options = get_option('theme_color');
+$home = get_theme_root("Monarch Modern")."/MonarchModern-Dev";
 //Constructs stylesheet config file
 $conf = "@alert-yellow:      #".$options['ay'].";
 @alert-red:         #".$options["ar"].";
@@ -203,19 +204,15 @@ $conf = "@alert-yellow:      #".$options['ay'].";
 @link:              #".$options["link"].";
 @bones-blue:        #1990db;
 @content:           #".$options["content"].";";
-file_put_contents(get_theme_root("Monarch Modern")."/MonarchModern-Dev/library/style/conf.inc.tmp", $conf); } ?>
+file_put_contents($home."/library/style/conf.inc.tmp", $conf);
+} ?>
 
 <form method="post" action="options.php">
 <?php settings_fields('theme_settings');
 $options = get_option('theme_color');
 $track = get_option('theme_trackers');
 if(isset($theme_color[ay])) $theme_color = array();
-add_action('admin_enqueue_scripts', 'my_admin_scripts');
-function my_admin_scripts() {
-        wp_enqueue_media();
-        wp_register_script('upload-js', get_template_directory_uri().'/library/js/upload.js', array('jquery'));
-        wp_enqueue_script('upload-js');
-}?>
+?>
     <h2>Colors</h2>
 <table>
 <?//Alert Colors ?>
@@ -261,19 +258,7 @@ function my_admin_scripts() {
 <label for="theme_settings[content]"></label></td>
 </tr>
 </table>
-    
-    <h2>Icons and Stuff</h2>
-<label for="upload_image"><h3>Logo</h3><br/>
-    <input id="upload_image" type="text" size="36" name="theme_color[image]" value="<?php if (isset($theme_color["image"])) echo $theme_color["image"]; else echo "http://";?>" /> 
-    <input id="upload_image_button" class="button" type="button" value="Upload Image" />
-    <br />Enter a URL or upload an image
-</label>
-<br/>
-<label for="upload_image"><h3>Favicon</h3><br/>
-    <input id="upload_image" type="text" size="36" name="theme_color[image]" value="<?php if (isset($theme_color["image"])) echo $theme_color["image"]; else echo "http://";?>" /> 
-    <input id="upload_image_button" class="button" type="button" value="Upload Image" />
-    <br />Enter a URL or upload an image
-</label>
+
 
 <h2>Trackers</h2>
 
@@ -305,7 +290,5 @@ function my_admin_scripts() {
 <p><input name="submit" id="submit" value="Save Changes" type="submit"></p>
 </form>
 </div><!-- END wrap -->
-
 <?php
-}
-?>
+}?>
